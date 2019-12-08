@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "mandant_id": 4711,
+        "vehicle_id": 815,
+        "vehicle_category": "Mittelklasse",
+        "vehicle_model": "BMW I 3",
+        "vehicle_engine": "Electro",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 52.369157,
+        "longitude": 9.965539,
+        "vehicle_image": "https://www.autozeitung.de/assets/styles/300x180/public/field/image/bmw-i3-01.jpg"
+    },
+    {
+        "id": 2,
+        "mandant_id": 11,
+        "vehicle_id": 15,
+        "vehicle_category": "Oberklasse",
+        "vehicle_model": "Mercedes C 180",
+        "vehicle_engine": "Diesel",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 53.369157,
+        "longitude": 9.865539,
+        "vehicle_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRkbyJhQJo7cbwUB3bJADx4RIvgTYJxBxxW5dYHLWY24eHUDht&s"
+    },
+    {
+        "id": 3,
+        "mandant_id": 11,
+        "vehicle_id": 150,
+        "vehicle_category": "Oberklasse",
+        "vehicle_model": "Mercedes S 500",
+        "vehicle_engine": "Benzin",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 55.369157,
+        "longitude": 9.995539,
+        "vehicle_image": "https://www.autoscout24.de/assets/auto/images/model/mercedes-benz/mercedes-benz-s-500/mercedes-benz-s-500-m-02.jpg"
+    },
+    {
+        "id": 4,
+        "mandant_id": 4711,
+        "vehicle_id": 13,
+        "vehicle_category": "Kleinwagen",
+        "vehicle_model": "VW Polo",
+        "vehicle_engine": "Electro",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 53.369157,
+        "longitude": 8.995539,
+        "vehicle_image": "https://i.auto-bild.de/mdb/large/78/polo-5ac.png"
+    },
+    {
+        "id": 5,
+        "mandant_id": 11,
+        "vehicle_id": 139,
+        "vehicle_category": "Kleinwagen",
+        "vehicle_model": "VW Golf",
+        "vehicle_engine": "Benzin",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 59.369157,
+        "longitude": 6.995539,
+        "vehicle_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtajQZFlXgKWhc1O9sjfINItgNbGVjoI96OwH_eW9o18XL_sro&s"
+    },
+    {
+        "id": 6,
+        "mandant_id": 9,
+        "vehicle_id": 9,
+        "vehicle_category": "Fahrad",
+        "vehicle_model": "Kettler",
+        "vehicle_engine": "none",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 57.369157,
+        "longitude": 6.995539,
+        "vehicle_image": "https://www.fahrrad-xxl.de/media/pimg/I00157514/thumbs/246360_2020182.jpg"
+    },
+    {
+        "id": 7,
+        "mandant_id": 123,
+        "vehicle_id": 444,
+        "vehicle_category": "Mittelklasse",
+        "vehicle_model": "Opel Insignia",
+        "vehicle_engine": "Electro",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 55.369157,
+        "longitude": 9.995539,
+        "vehicle_image": "https://imgr1.auto-motor-und-sport.de/Opel-Insignia-Facelift-2020--bigMobileWide-d92fa7c8-1651944.jpg"
+    },
+    {
+        "id": 8,
+        "mandant_id": 444,
+        "vehicle_id": 3,
+        "vehicle_category": "Sportwagen",
+        "vehicle_model": "Porsche 911",
+        "vehicle_engine": "Benzin",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 57.369157,
+        "longitude": 9.995539,
+        "vehicle_image": "https://i.auto-bild.de/ir_img/2/3/3/1/8/4/5/Porsche-911-992-Carrera-S-Leasing-474x316-c42e5ddd6c13641c.jpg"
+    },
+    {
+        "id": 9,
+        "mandant_id": 987654,
+        "vehicle_id": 123456,
+        "vehicle_category": "Sportwagen",
+        "vehicle_model": "Ferari 488",
+        "vehicle_engine": "Benzin",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 51.369157,
+        "longitude": 8.995539,
+        "vehicle_image": "https://www.automobil-produktion.de/assets/images/f/ferrari-488-7355933f.jpg"
+    },
+    {
+        "id": 10,
+        "mandant_id": 553311,
+        "vehicle_id": 6543890,
+        "vehicle_category": "Kleinwagen",
+        "vehicle_model": "Fiat 500",
+        "vehicle_engine": "Benzin",
+        "vehicle_description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam ",
+        "latitude": 49.369157,
+        "longitude": 11.995539,
+        "vehicle_image": "https://imgr1.auto-motor-und-sport.de/Fiat-500-Seitenansicht-bigMobileWide-966fc6c2-937689.jpg"
+    }
+]
