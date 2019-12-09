@@ -1,1 +1,1 @@
-export const GOOGLE_MAP_KEY = "YOUR_GOOGLE_KEY";
+export const GOOGLE_MAP_KEY = "YOUR_GOOGLE_MAP_KEY";

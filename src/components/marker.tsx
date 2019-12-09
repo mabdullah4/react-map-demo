@@ -21,7 +21,7 @@ const Marker: React.SFC<MarkerProps> = ({ vehicle, isActive = false, handleHover
             onMouseOver={() => handleHover(vehicle.id)}
         >
             <div className="map-vehicle__item">
-                <div className="item__wrapper">{vehicle.vehicle_id}</div>
+                <div className="item__wrapper">{vehicle.vehicle_model}</div>
                 <Hint isVehicleActive={isVehicleActive || isClicked} vehicle={vehicle} />
             </div>
         </div>

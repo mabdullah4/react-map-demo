@@ -44,6 +44,7 @@ const App: React.SFC<MainProps> = () => {
 
     const handleHover = (vehicleId: number) => {
         setActiveIndex(vehicleId);
+        setActiveClickIndex(vehicleId);
     };
 
     return (
