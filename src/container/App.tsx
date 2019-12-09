@@ -19,8 +19,8 @@ const UserMarker = ({ lat, lng, isLocationAllowed }: { lat: number; lng: number;
 const App: React.SFC<MainProps> = () => {
     const [vehicles, setVehicles] = React.useState<IVehicle[]>([]);
     const [activeIndex, setActiveIndex] = React.useState(-1);
+    const [activeClickIndex, setActiveClickIndex] = React.useState(-1);
     const [userCenterLocation, setUserCenterLocation] = React.useState({ lat: 52.369157, lng: 9.965539 });
-    // const [currentCenterLocation, setCurrentCenterLocation] = React.useState({ lat: 52.369157, lng: 9.965539 });
     const [isLocationAllowed, setLocationAllowed] = React.useState(false);
 
     React.useEffect(() => {
@@ -29,17 +29,21 @@ const App: React.SFC<MainProps> = () => {
         });
         navigator.geolocation.getCurrentPosition(({ coords: { longitude, latitude } }) => {
             setUserCenterLocation({ lat: latitude, lng: longitude });
-            // setCurrentCenterLocation({ lat: latitude, lng: longitude });
             setLocationAllowed(true);
         });
     }, []);
 
+    const handleClick = (vehicleId: number) => {
+        setActiveIndex(vehicleId);
+        if (vehicleId !== activeClickIndex) {
+            setActiveClickIndex(vehicleId);
+        } else {
+            setActiveClickIndex(-1);
+        }
+    };
+
     const handleHover = (vehicleId: number) => {
         setActiveIndex(vehicleId);
-        // const vehicle = vehicles.find(vehicle => vehicle.id === vehicleId);
-        // if (vehicle) {
-        //     setCurrentCenterLocation({ lat: Number(vehicle.latitude), lng: Number(vehicle.longitude) });
-        // }
     };
 
     return (
@@ -52,6 +56,7 @@ const App: React.SFC<MainProps> = () => {
                             <Marker
                                 handleHover={handleHover}
                                 isActive={activeIndex === vehicle.id}
+                                isClicked={activeClickIndex === vehicle.id}
                                 lat={vehicle.latitude}
                                 lng={vehicle.longitude}
                                 key={vehicle.id}
@@ -63,7 +68,13 @@ const App: React.SFC<MainProps> = () => {
             </section>
             <aside className="vehicles-list">
                 {vehicles.map(vehicle => (
-                    <VehicleItem isActive={vehicle.id === activeIndex} key={vehicle.id} handleHover={handleHover} vehicle={vehicle} />
+                    <VehicleItem
+                        handleClick={handleClick}
+                        isActive={vehicle.id === activeIndex}
+                        key={vehicle.id}
+                        handleHover={handleHover}
+                        vehicle={vehicle}
+                    />
                 ))}
             </aside>
         </main>

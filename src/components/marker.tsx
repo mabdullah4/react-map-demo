@@ -7,21 +7,22 @@ export interface MarkerProps {
     lat: number;
     lng: number;
     isActive: boolean;
+    isClicked: boolean;
     handleHover: Function;
 }
 
-const Marker: React.SFC<MarkerProps> = ({ vehicle, isActive = false, handleHover }) => {
+const Marker: React.SFC<MarkerProps> = ({ vehicle, isActive = false, handleHover, isClicked = false }) => {
     const [isVehicleActive, setIsVehicleActive] = React.useState(false);
     return (
         <div
-            className={`pointer  ${isActive ? "active" : ""}`}
+            className={`pointer  ${isActive || isClicked ? "active" : ""}`}
             onClick={() => setIsVehicleActive(!isVehicleActive)}
             onMouseOut={() => handleHover(-1)}
             onMouseOver={() => handleHover(vehicle.id)}
         >
             <div className="map-vehicle__item">
                 <div className="item__wrapper">{vehicle.vehicle_id}</div>
-                <Hint isVehicleActive={isVehicleActive} vehicle={vehicle} />
+                <Hint isVehicleActive={isVehicleActive || isClicked} vehicle={vehicle} />
             </div>
         </div>
     );

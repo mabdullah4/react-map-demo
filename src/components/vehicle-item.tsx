@@ -5,14 +5,16 @@ export interface VehicleItemProps {
     vehicle: IVehicle;
     handleHover: Function;
     isActive: boolean;
+    handleClick: Function;
 }
 
-const VehicleItem: React.SFC<VehicleItemProps> = ({ isActive = false, vehicle, handleHover }) => {
+const VehicleItem: React.SFC<VehicleItemProps> = ({ isActive = false, vehicle, handleHover, handleClick }) => {
     return (
         <article
             className={`vehicle__item ${isActive ? "active" : ""}`}
             onMouseEnter={() => handleHover(vehicle.id)}
             onMouseOut={() => handleHover(-1)}
+            onClick={() => handleClick(vehicle.id)}
         >
             <div className="vehicle__id">
                 <span>{vehicle.vehicle_id}</span>
