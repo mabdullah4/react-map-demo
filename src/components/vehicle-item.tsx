@@ -14,7 +14,7 @@ const VehicleItem: React.SFC<VehicleItemProps> = ({ isActive = false, vehicle, h
             className={`vehicle__item ${isActive ? "active" : ""}`}
             onMouseEnter={() => handleHover(vehicle.id)}
             onMouseOut={() => handleHover(-1)}
-            onClick={() => handleClick(vehicle.id)}
+            onClick={() => handleClick(vehicle)}
         >
             <div className="vehicle__id">
                 <span>{vehicle.vehicle_id}</span>

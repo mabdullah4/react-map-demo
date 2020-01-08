@@ -11,7 +11,7 @@ export interface GoogleMapProps {
 
 const GoogleMap: React.SFC<GoogleMapProps> = ({ center, zoom = 4, children }) => {
     return (
-        <GoogleMapReact bootstrapURLKeys={{ key: GOOGLE_MAP_KEY }} center={center} zoom={zoom}>
+        <GoogleMapReact options={{ fullscreenControl: false }} bootstrapURLKeys={{ key: GOOGLE_MAP_KEY }} center={center} zoom={zoom}>
             {children}
         </GoogleMapReact>
     );

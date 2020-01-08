@@ -5,6 +5,7 @@ import GoogleMap from "../components/google-map";
 import Marker from "../components/marker";
 import VehicleItem from "../components/vehicle-item";
 import MapMarker from "./../assets/map-marker.png";
+import ICoordinates from "../model/ICoordinate";
 
 export interface MainProps {}
 
@@ -20,7 +21,7 @@ const App: React.SFC<MainProps> = () => {
     const [vehicles, setVehicles] = React.useState<IVehicle[]>([]);
     const [activeIndex, setActiveIndex] = React.useState(-1);
     const [activeClickIndex, setActiveClickIndex] = React.useState(-1);
-    const [userCenterLocation, setUserCenterLocation] = React.useState({ lat: 52.369157, lng: 9.965539 });
+    const [userCenterLocation, setUserCenterLocation] = React.useState<ICoordinates>({ lat: 52.369157, lng: 9.965539 });
     const [isLocationAllowed, setLocationAllowed] = React.useState(false);
 
     React.useEffect(() => {
@@ -33,10 +34,12 @@ const App: React.SFC<MainProps> = () => {
         });
     }, []);
 
-    const handleClick = (vehicleId: number) => {
-        setActiveIndex(vehicleId);
-        if (vehicleId !== activeClickIndex) {
-            setActiveClickIndex(vehicleId);
+    const handleClick = (vehicle: IVehicle) => {
+        setActiveIndex(vehicle.id);
+        setUserCenterLocation({ lat: Number(vehicle.latitude), lng: Number(vehicle.longitude) });
+
+        if (vehicle.id !== activeClickIndex) {
+            setActiveClickIndex(vehicle.id);
         } else {
             setActiveClickIndex(-1);
         }
